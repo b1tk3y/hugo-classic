@@ -5,7 +5,7 @@
 {{ if .Params.date }}<h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>{{ end }}
 <p class="terms">
   {{ range .Params.tags }}
-  <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+  <a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a>
   &nbsp;
   {{ end }}
 </p>
